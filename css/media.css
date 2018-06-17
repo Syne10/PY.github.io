@@ -1,0 +1,55 @@
+nav input[type="checkbox"]{
+    display: none;
+}
+
+@media all and (max-width: 500px) {
+    .toggle-button {
+        display: block;
+    }
+    .h-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: normal;
+    }
+
+    nav {
+        margin-top: 43px;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    nav li {
+        width: 100%;
+        display: block;
+    }
+    nav a {
+        display: block;
+        width: 100%;
+        font-size: 12px;
+        padding: 10px;
+        border-bottom: 1px solid rgba(194, 194, 194, 0.79);
+        margin-right: 0;
+        /*background-color: #f9f9f9;*/
+    }
+    nav a:hover {
+        border-bottom-color: #ffea00;
+    }
+
+    nav ul li:last-child a {
+        border-bottom: none;
+    }
+
+    label.toggle-button:hover {
+        cursor: pointer;
+    }
+    input.toggleMenu:checked + label.toggle-button {
+        color: white;
+        background-color: #c2c2c2;
+    }
+    input.toggleMenu:checked ~ ul {
+        display: block;
+    }
+}
