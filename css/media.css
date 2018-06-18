@@ -48,6 +48,7 @@ nav input[type="checkbox"]{
     input.toggleMenu:checked + label.toggle-button {
         color: white;
         background-color: #c2c2c2;
+        padding-left: 10px;
     }
     input.toggleMenu:checked ~ ul {
         display: block;
