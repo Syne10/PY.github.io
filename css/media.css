@@ -1,56 +1,81 @@
-nav input[type="checkbox"]{
-    display: none;
+
+@media screen and (max-width: 857px){
+    nav ul li a {
+        margin-right: 30px;
+    }
 }
 
-@media all and (max-width: 500px) {
-    .toggle-button {
+@media screen and (max-width: 752px){
+    nav ul li a {
+        margin-right: 0;
+    }
+}
+@media screen and (max-width: 600px){
+    .logo {
+        margin-right: 170px;
+    }
+    nav ul {
         display: block;
     }
-    .h-container {
+    nav ul li {
+        width: 100%;
+        margin-right: 10px;
+    }
+    nav ul li a {
+        padding: 0 10px 0 5px;
         width: 100%;
         display: flex;
+    }
+}
+
+
+
+@media screen and (max-width: 420px){
+    .button-menu {
+        display: block;
+        padding: 0 16px 0 10px;
+    }
+    .h-container{
+        width: 100%;
         justify-content: space-around;
         align-items: normal;
+    }
+
+    .logo {
+        margin-right: 0;
     }
 
     nav {
         margin-top: 43px;
     }
 
+
     nav ul {
         display: none;
     }
-
-    nav li {
-        width: 100%;
-        display: block;
+    nav ul li {
+        display: flex;
     }
-    nav a {
-        display: block;
-        width: 100%;
-        font-size: 12px;
-        padding: 10px;
-        border-bottom: 1px solid rgba(194, 194, 194, 0.79);
+
+    nav ul li a {
         margin-right: 0;
-        /*background-color: #f9f9f9;*/
-    }
-    nav a:hover {
-        border-bottom-color: #ffea00;
-    }
-
-    nav ul li:last-child a {
-        border-bottom: none;
+        padding: 0 10px 0 9px;
+        width: 100%;
+        display: block;
     }
 
-    label.toggle-button:hover {
-        cursor: pointer;
+    
+    input#check-menu:checked + label.button-menu {
+        background-color: #d7d7d7;
+        color: #fff;
     }
-    input.toggleMenu:checked + label.toggle-button {
-        color: white;
-        background-color: #c2c2c2;
-        padding-left: 10px;
+    input#check-menu:checked ~ ul {
+        display: block;
     }
-    input.toggleMenu:checked ~ ul {
+    input#check-menu:checked ~ label.button-menu i.bar{
+        display: none;
+    }
+    input#check-menu:checked ~ label.button-menu i.close{
         display: block;
     }
 }
